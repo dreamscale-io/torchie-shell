@@ -21,6 +21,7 @@ module.exports = class WindowManager {
   constructor() {
     log.info("[WindowManager] created -> okay");
     this.windows = [];
+    this.screenshotTaken = false;
     this.events = {
       focusWindow: EventFactory.createEvent(
         EventFactory.Types.WINDOW_FOCUS,
@@ -39,7 +40,10 @@ module.exports = class WindowManager {
       ),
       consoleShowHide: EventFactory.createEvent(
         EventFactory.Types.WINDOW_CONSOLE_SHOW_HIDE
-      )
+      ),
+      screenshot: EventFactory.createEvent(
+        EventFactory.Types.SCREENSHOT
+    )
     };
   }
 
@@ -73,8 +77,16 @@ module.exports = class WindowManager {
       setTimeout(() => {
         win.consoleShortcut.pressedState = 0;
       }, win.consoleShortcut.delay);
+      if (!win.window.isVisible() && !this.screenshotTaken) {
+        // About to open.  Dispatch of consoleShowHide is "deferred" until screenshot taken and saved.
+        // A handler in the main process will (re)dispatch a WINDOW_CONSOLE_SHOW_HIDE event after the screenshot save is underway
+        this.events.screenshot.dispatch();
+        this.screenshotTaken = true;  // _Assume_ it will be successful
+        return;
+      }
       this.events.consoleShowHide.dispatch(win.state);
     }
+    this.screenshotTaken = false;
   }
 
   /*

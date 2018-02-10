@@ -2,9 +2,14 @@ import React, { Component } from "react";
 import { RendererEventFactory } from "../RendererEventFactory";
 import ConsoleLayout from "../components/ConsoleLayout";
 
-const { remote } = window.require("electron"),
+const fs = window.require('fs');
+const os = window.require('os');
+const path = window.require('path');
+
+const { remote, desktopCapturer, screen } = window.require("electron"),
   log = remote.require("electron-log");
 
+const screenshotName = 'metaos-screenshot.png';
 //
 // This View will contain logic to inject the various tabs of the
 // console into the view. It will also manage the states of these
@@ -15,14 +20,26 @@ export default class ConsoleView extends Component {
   /// Activates animation according
   constructor(props) {
     super(props);
+    this.screenshotPath = "";
     this.events = {
       load: RendererEventFactory.createEvent(
         RendererEventFactory.Events.WINDOW_CONSOLE_SHOW_HIDE,
         this,
         this.onLoadCb
+      ),
+      screenshot: RendererEventFactory.createEvent(
+        RendererEventFactory.Events.SCREENSHOT,
+        this,
+        () => {
+          this.takeScreenshot();
+        }
       )
     };
   }
+
+  logMsg = msg => {
+    log.info(`[${this.constructor.name}] ${msg}`);
+  };
 
   onLoadCb(event, arg) {
     log.info("[ConsoleView] event -> WINDOW_CONSOLE_SHOW_HIDE : " + arg);
@@ -97,5 +114,43 @@ export default class ConsoleView extends Component {
         <ConsoleLayout />
       </div>
     );
+  }
+
+  takeScreenshot() {
+    let options = {
+      types: ['screen'],
+      thumbnailSize: this._getScreenshotDimensions()
+    };
+    desktopCapturer.getSources(options, (error, sources) => {
+      if (error) {
+        return this.logMsg(error.message);
+      }
+      sources.forEach(source => {
+        if (source.name.toLowerCase() === 'entire screen' || source.name === 'Screen 1') {
+          if (this.screenshotPath === '') {
+            const tmpdir = os.tmpdir();
+            this.logMsg(`takeScreenshot() - os.tmpdir()="${tmpdir}"`);
+            this.logMsg(`takeScreenshot() - screenshotName="${screenshotName}"`);
+            this.screenshotPath = path.join(tmpdir, screenshotName);
+          }
+          fs.writeFile(this.screenshotPath, source.thumbnail.toPng(), error => {
+            this.events.consoleShowHide.dispatch();
+            if (error) {
+              return this.logMsg(`takeScreenshot() - error,message="${error.message}"`);
+            }
+            this.logMsg(`takeScreenshot() - Saved screenshot to "${this.screenshotPath}"`);
+          })
+        }
+      })
+    })
+  }
+
+  _getScreenshotDimensions() {
+    const screenSize = screen.getPrimaryDisplay().workAreaSize;
+    const maxDimension = Math.max(screenSize.width, screenSize.height);
+    return {
+      width: maxDimension * window.devicePixelRatio,
+      height: maxDimension * window.devicePixelRatio
+    }
   }
 }
