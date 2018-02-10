@@ -134,7 +134,7 @@ export default class ConsoleView extends Component {
             this.screenshotPath = path.join(tmpdir, screenshotName);
           }
           fs.writeFile(this.screenshotPath, source.thumbnail.toPng(), error => {
-            this.events.consoleShowHide.dispatch();
+            this.events.load.dispatch();
             if (error) {
               return this.logMsg(`takeScreenshot() - error,message="${error.message}"`);
             }
