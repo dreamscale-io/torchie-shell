@@ -6,18 +6,19 @@
     <meta name="theme-color" content="#000000">
     <link rel="manifest" href="%PUBLIC_URL%/manifest.json">
     <title>Torchie</title>
+    <!-- <link rel="stylesheet" href="%PUBLIC_URL%/main.css" type="text/css" media="screen" charset="utf-8"> -->
     <style>
-      /* 
-       * GLOBAL 
+      /*
+       * GLOBAL
        */
       @keyframes fadein {
-        from { 
+        from {
           background: rgba(27, 28, 29, 0.0);
-          opacity: 0; 
+          opacity: 0;
         }
-        to { 
+        to {
           background: rgba(27, 28, 29, 0.96);
-          opacity: 0.2; 
+          opacity: 0.2;
         }
       }
       div#root {
@@ -25,7 +26,7 @@
         height: 100%;
         background: #1b1c1d;
         animation: fadein 0.420s;
-        box-sizing: border-box; 
+        box-sizing: border-box;
         border-top: 1px solid rgba(36, 36, 36, 0.96);
         border-left: 1px solid rgba(36, 36, 36, 0.96);
         border-right: 1px solid rgba(67, 67, 67, 0.96);
@@ -40,9 +41,9 @@
       body {
         overflow: hidden;
       }
-      
-      /* 
-       * VIEW: LOADING 
+
+      /*
+       * VIEW: LOADING
        */
       #view.loading {
         background: #1b1c1d;
@@ -70,8 +71,8 @@
         padding-top: 2px;
       }
 
-      /* 
-       * VIEW: ACTIVATOR 
+      /*
+       * VIEW: ACTIVATOR
        */
       #view.activator {
         background: #1b1c1d;
@@ -142,8 +143,8 @@
       }
 
 
-      /* 
-       * COMPONENT: CONSOLE-LAYOUT 
+      /*
+       * COMPONENT: CONSOLE-LAYOUT
        */
       #component.consoleLayout #wrapper.consoleSidebar {
         float: left;
@@ -170,8 +171,8 @@
         width: 100%;
       }
 
-      /* 
-       * COMPONENT: CONSOLE-SIDEBAR 
+      /*
+       * COMPONENT: CONSOLE-SIDEBAR
        */
       #component.consoleSidebar .ui.menu {
         border-radius: 0;
@@ -195,7 +196,7 @@
         left: 36px;
       }
 
-      /* 
+      /*
        * COMPONENT: CONSOLE-SIDEBAR-PANEL
        */
       #component.consoleSidebarPanel {
@@ -265,8 +266,8 @@
 
 
 
-      /* 
-       * COMPONENT: CONSOLE-MENU 
+      /*
+       * COMPONENT: CONSOLE-MENU
        */
       #component.consoleMenu .ui.menu {
         background: rgba(27, 27, 27, 0.96);
@@ -381,8 +382,8 @@
       }
 
 
-      /* 
-       * COMPONENT: TROUBLESHOOT-LAYOUT 
+      /*
+       * COMPONENT: TROUBLESHOOT-LAYOUT
        */
       #component.troubleshootLayout #wrapper.troubleshootItems {
         margin: 0px;
@@ -394,8 +395,8 @@
         padding: 21px 9px 0 9px;
       }
 
-      /* 
-       * COMPONENT: TROUBLESHOOT-PANEL-DEFAULT 
+      /*
+       * COMPONENT: TROUBLESHOOT-PANEL-DEFAULT
        */
       #component.troubleshootPanelDefault .ui.grid{
         margin-bottom: -2rem;
@@ -545,8 +546,8 @@
       }
 
 
-      /* 
-       * COMPONENT: JOURNAL-LAYOUT 
+      /*
+       * COMPONENT: JOURNAL-LAYOUT
        */
       #component.journalLayout .ui.segments {
         margin: 0px;
@@ -556,8 +557,8 @@
         padding: 4px 1px;
       }
 
-      /* 
-       * COMPONENT: JOURNAL-ITEMS 
+      /*
+       * COMPONENT: JOURNAL-ITEMS
        */
       #component.journalItems {
         overflow-y: scroll;
@@ -601,7 +602,7 @@
         font-style: italic;
         white-space: nowrap;
         overflow: hidden;
-        text-overflow: ellipsis; 
+        text-overflow: ellipsis;
       }
 
       #component.journalItems .ui.grid .row .wtfFlame {
@@ -651,8 +652,8 @@
         box-shadow: inset 0 0 8px rgba(25, 25, 25, 0.96);
       }
 
-      /* 
-       * COMPONENT: TIME-SCRUBBER 
+      /*
+       * COMPONENT: TIME-SCRUBBER
        */
       #component.timeScrubber .ui.grid .row {
         padding: 3px 0px;
@@ -667,16 +668,16 @@
         color:#c3c3c3;
         white-space: nowrap;
         overflow: hidden;
-        text-overflow: ellipsis; 
+        text-overflow: ellipsis;
       }
       #component.timeScrubber .ui.grid .column.info .date {
         font-weight:700;
         white-space: nowrap;
         overflow: hidden;
-        text-overflow: ellipsis; 
+        text-overflow: ellipsis;
       }
 
-      /* 
+      /*
        * COMPONENT: JOURNAL-ENTRY
        */
       #component.journalEntry .ui.segment {
@@ -768,12 +769,12 @@
         border: none;
       }
 
-      /* 
-       * COMPONENT: POPUP 
+      /*
+       * COMPONENT: POPUP
        */
       .ui.popup {
         color: #e9e9e9 !important;
-        border: 1px solid #7b7b7b !important; 
+        border: 1px solid #7b7b7b !important;
       }
       .ui.popup.chunkTitle .date, .ui.popup.timeScrubber .date{
         font-style: italic;
@@ -782,13 +783,13 @@
       .ui.popup.bottom:before {
         top: -6px !important;
         border-left: 1px solid #7b7b7b !important;
-        border-top: 1px solid #7b7b7b !important; 
+        border-top: 1px solid #7b7b7b !important;
       }
       .ui.popup.top:before {
         bottom: -6px !important;
         border-right: 1px solid #7b7b7b !important;
-        border-bottom: 1px solid #7b7b7b !important; 
-      } 
+        border-bottom: 1px solid #7b7b7b !important;
+      }
       .ui.popup .ui.divider {
          margin: 8px 0 6px 0;
       }
