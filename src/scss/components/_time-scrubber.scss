@@ -1,0 +1,25 @@
+
+/*
+ * COMPONENT: TIME-SCRUBBER
+ */
+#component.timeScrubber .ui.grid .row {
+  padding: 3px 0px;
+}
+#component.timeScrubber .ui.grid .column.scrubber {
+  padding: 2px 8px 0px 16px;
+}
+#component.timeScrubber .ui.grid .column.info div {
+  font-style: italic;
+}
+#component.timeScrubber .ui.grid .column.info .title {
+  color:#c3c3c3;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+#component.timeScrubber .ui.grid .column.info .date {
+  font-weight:700;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}

@@ -1,0 +1,72 @@
+
+
+/*
+ * VIEW: ACTIVATOR
+ */
+#view.activator {
+  background: #1b1c1d;
+  height: 100%;
+}
+#view.activator .ui.segment.tokenKey,
+#view.activator .ui.segment.terms,
+#view.activator .ui.segment.activating {
+  padding-top: 8px;
+}
+#view.activator .ui.segment.tokenKey {
+  padding-top: 12px;
+}
+#view.activator .ui.segment.terms {
+  max-height: 120px;
+  overflow: hidden;
+  overflow-y: auto;
+  font-size: 12px;
+  background: #323334;
+}
+#view.activator .ui.activatingContent {
+  padding-top: 48px;
+}
+#view.activator .ui.activatingContent .header {
+  width: 100%;
+}
+#view.activator .ui.successContent {
+  padding-top: 16px;
+}
+#view.activator .ui.successContent .header {
+  width: 100%;
+}
+#view.activator .ui.successContent .sub.header {
+  width: 100%;
+}
+#view.activator .ui.successContent .ui.divider {
+  padding-top: 16px;
+}
+
+#view.activator .ui.failedContent {
+  padding-top: 16px;
+}
+#view.activator .ui.failedContent .header {
+  width: 100%;
+}
+#view.activator .ui.failedContent .sub.header {
+  width: 100%;
+}
+#view.activator .ui.failedContent .ui.divider {
+  padding-top: 16px;
+}
+
+#view.activator .ui.input input {
+  transition: border 0.840s ease-out;
+  background: rgba(27, 28, 29, 0.96);
+  border: 1px solid rgba(74, 74, 74, 0.96);
+  color: rgba(241, 241, 241, 0.96);
+}
+#view.activator .ui.input input:focus {
+  border: 1px solid rgba(100, 53, 201, 0.96);
+}
+#view.activator .ui.input input::placeholder {
+  font-style: italic;
+  color: rgba(74, 74, 74, 0.96)
+}
+#view.activator button {
+  cursor: pointer !important;
+}

@@ -1,0 +1,30 @@
+
+
+/*
+ * VIEW: LOADING
+ */
+#view.loading {
+  background: #1b1c1d;
+  height: 100%;
+}
+#view.loading .icon {
+  margin: auto;
+  margin-top: 52px;
+  font-size: 32px;
+}
+#view.loading .loginFailed .icon {
+  font-size: 64px;
+}
+#view.loading .ui.header .sub.header{
+  font-style: italic;
+}
+#view.loading .progress .bar {
+  background-color: #6435c9;
+}
+#view.loading .progress .label {
+  text-align: right !important;
+  font-style: italic;
+  opacity: 0.5;
+  padding-right: 5px;
+  padding-top: 2px;
+}
