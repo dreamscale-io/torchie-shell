@@ -1,0 +1,71 @@
+
+
+/*
+ * COMPONENT: TEAM-PANEL
+ */
+
+i.doneGreen.check.icon {
+  color: rgba(27, 175, 26, 0.96);
+}
+
+i.doneGreenDark.check.icon {
+  color: rgba(27, 130, 26, 0.96);
+}
+
+div.doneGreen {
+  color: rgba(27, 175, 26, 0.96);
+}
+
+div.doneRed {
+  color: rgba(255, 0, 0, 0.96);
+}
+
+i.doneRed.close.icon {
+  color: rgba(160, 0, 0, 0.96);
+}
+
+i.onlineColor.circle.link.icon {
+  color: rgba(140, 110, 250, 1);
+}
+
+i.offlineColor.circle.outline.icon {
+  color: #999999;
+}
+
+i.alarmColor.circle.link.icon {
+  color: red;
+}
+
+span.alarm {
+  color: red;
+  font-style: italic;
+}
+
+span.offlineColor {
+  color: #999999;
+}
+
+#component.teamPanel .ui.grid {
+  margin: 0px 0;
+}
+
+#component.teamPanel .ui.grid>.row:last-child {
+  border-bottom: none;
+}
+#component.teamPanel .ui.grid>.row:hover {
+  background: rgba(40, 40, 40, 0.96);
+}
+
+#component.teamPanel .ui.grid>.active {
+  background: rgba(50, 50, 51, 0.96);
+  font-weight: bold;
+}
+#component .teamPanel > div > div.ui.inverted.segment > div {
+  height: 100%;
+  overflow-y: scroll;
+}
+
+#component.teamPanel .ui.grid .row .memberText {
+  font-weight: 400;
+  color: #cccccc;
+}

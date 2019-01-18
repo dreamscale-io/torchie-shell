@@ -1,0 +1,29 @@
+
+
+/*
+ * COMPONENT: CONSOLE-LAYOUT
+ */
+#component.consoleLayout #wrapper.consoleSidebar {
+  float: left;
+  position: relative;
+  padding: 0px 0px 0px 0px;
+}
+#component.consoleLayout #wrapper.consoleSidebarPanel {
+  float: left;
+  position: relative;
+  transition: width 0.420s;
+  width: 0px;
+
+}
+#component.consoleLayout #wrapper.consoleContent {
+  padding: 4px;
+  position: relative;
+  overflow: hidden;
+  left: 0px;
+}
+#component.consoleLayout #wrapper.consoleMenu {
+  padding: 0px 0px;
+  position: relative;
+  float: left;
+  width: 100%;
+}
