@@ -1,0 +1,68 @@
+body {
+
+}
+
+.app {
+  background-color: #000;
+  height: 60vh;
+  color: #fff;
+  font-family: Lato,'Helvetica Neue',Arial,Helvetica,sans-serif;
+  font-size: 14px;
+  padding: 20px;
+  min-height: 160px;
+}
+
+.wtf {
+  background-color: #333;
+  display: flex;
+  flex: 1;
+  height: 100%;
+  flex-direction: column;
+
+
+}
+
+h1 {
+  margin: 0;
+  background-color: #666;
+  text-align: center;
+}
+
+.content {
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  flex: 1;
+  padding: 10px;
+}
+
+.troubleshoot-start {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content:space-between;
+}
+
+.add-problem {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  align-self: flex-end;
+}
+
+.button {
+  background-color: #ff0000;
+  padding: 10px;
+}
+
+input {
+  flex: 1;
+}
+
+.troubleshoot-screenshot {
+  background-image: url("screenshot.png");
+  width: 80vw;
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin-left: 10px;
+}
