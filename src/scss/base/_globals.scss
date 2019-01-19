@@ -1,7 +1,11 @@
+// we'll eventually get all the colors and units here
 
 
+
+//legacy base stuff
 
 @keyframes fadein {
+  //fading both the color opacity and the element opacity makes me think someone was flailing trying to make fadein look nicer
   from {
     background: rgba(27, 28, 29, 0.0);
     opacity: 0;
