@@ -3,16 +3,65 @@
 
 /*
  * COMPONENT: TROUBLESHOOT-LAYOUT
- */
-#component.troubleshootLayout #wrapper.troubleshootItems {
-  margin: 0px;
-  padding: 4px 1px;
+//  */
+// #component.troubleshootLayout #wrapper.troubleshootItems {
+//   margin: 0px;
+//   padding: 4px 1px;
+// }
+//
+// #component.troubleshootLayout #wrapper.troubleshootPanelDefault {
+//   margin: 0px;
+//   padding: 21px 9px 0 9px;
+// }
+
+.wtf {
+  h1 {
+    text-align: center;
+  }
 }
 
-#component.troubleshootLayout #wrapper.troubleshootPanelDefault {
-  margin: 0px;
-  padding: 21px 9px 0 9px;
+.problem-description {
+  background-color: #f00;
+  display: flex;
+  flex: 1;
+  height: 100%;
+  flex-direction: column;
 }
+
+.content {
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  flex: 1;
+  padding: 10px;
+}
+
+.troubleshoot-start {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content:space-between;
+}
+
+.add-problem {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  align-self: flex-end;
+}
+
+input {
+  flex: 1;
+}
+
+// .troubleshoot-screenshot {
+//   background-image: url("screenshot.png");
+//   width: 80vw;
+//   background-size: cover;
+//   background-repeat: no-repeat;
+//   margin-left: 10px;
+// }
+
 
 /*
  * COMPONENT: TROUBLESHOOT-PANEL-DEFAULT

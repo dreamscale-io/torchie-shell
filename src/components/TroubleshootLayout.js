@@ -2,6 +2,14 @@ import React, { Component } from "react";
 import TimeScrubber from "./TimeScrubber";
 import TroubleshootSessionNew from "./TroubleshootSessionNew";
 import TroubleshootSessionOpen from "./TroubleshootSessionOpen";
+import {
+  Button,
+  Divider,
+  Header,
+  Image,
+  Grid,
+  Segment, Input
+} from "semantic-ui-react";
 
 const {remote} = window.require("electron");
 
@@ -81,9 +89,11 @@ export default class TroubleshootLayout extends Component {
     }
 
     return (
-      <div id="component" className="troubleshootLayout">
-
-        <div id="wrapper" className="troubleshootPanelDefault">
+      <div id="component" className="wtf">
+        <div id="wrapper" className="problem-description">
+        <Header as="h1" attached="top" inverted>
+          Troubleshooting Scrapbook
+        </Header>
           {wtfPanel}
         </div>
       </div>

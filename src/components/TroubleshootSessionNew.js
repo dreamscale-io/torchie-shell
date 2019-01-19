@@ -151,22 +151,18 @@ export default class TroubleshootSessionNew extends Component {
   /// renders the default troubleshoot component in the console view
   render() {
     return (
-      <div id="component" className="troubleshootPanelDefault">
+      <div id="component" className="content">
         <Divider hidden fitted clearing/>
         <Grid textAlign="center" verticalAlign="middle" inverted>
           <Grid.Column width={10} className="rootLayout">
-            <Segment className="wtf" inverted>
-
-                    <Header as="h1" attached="top" inverted>
-                      Troubleshooting Scrapbook
-                    </Header>
+            <Segment className="troubleshoot-start" inverted>
                     <Segment attached basic inverted>
                       Let's solve a problem!  Take a screenshot and describe the situation below.
                       Once you start the session, a timer will begin on the next screen.
                       Look for clues to collect in your scrapbook, and get help from your team!
                     </Segment>
 
-                    <Segment attached basic inverted>
+                    <Segment className="add-problem" attached basic inverted>
                     <Input
                       id="problemStatement"
                       className="intentionText"
