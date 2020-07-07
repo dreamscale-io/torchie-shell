@@ -104,7 +104,7 @@
     "cross-env": "^5.0.1",
     "devtron": "^1.4.0",
     "docdash": "^1.2.0",
-    "electron": "^1.6.10",
+    "electron": "^7.2.4",
     "electron-builder": "^21.2.0",
     "electron-mocha": "^8.1.2",
     "express": "^4.16.2",
