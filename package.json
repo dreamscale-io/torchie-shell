@@ -84,7 +84,7 @@
     "moment-timezone": "^0.5.28",
     "mousetrap": "^1.6.5",
     "node-neural-network": "^1.0.3",
-    "node-notifier": "^5.1.2",
+    "node-notifier": "^8.0.1",
     "random-access-memory": "^3.1.1",
     "random-quotes": "^1.3.0",
     "react": "16.7.0",
