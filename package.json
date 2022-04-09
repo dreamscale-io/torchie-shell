@@ -80,7 +80,7 @@
     "hyperdiscovery": "^8.0.0",
     "lokijs": "^1.5.8",
     "minami": "^1.2.3",
-    "moment": "^2.19.3",
+    "moment": "^2.29.2",
     "moment-timezone": "^0.5.28",
     "mousetrap": "^1.6.5",
     "node-neural-network": "^1.0.3",
