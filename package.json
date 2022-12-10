@@ -110,7 +110,7 @@
     "electron": "^1.6.10",
     "electron-builder": "^21.2.0",
     "electron-mocha": "^8.1.2",
-    "express": "^4.16.2",
+    "express": "^4.17.3",
     "fs-extra": "^4.0.2",
     "gulp": "^3.9.1",
     "gulp-clean": "^0.3.2",
